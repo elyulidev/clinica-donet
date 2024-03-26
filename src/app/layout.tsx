@@ -5,7 +5,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Header from "@/components/Header";
 import { Toaster } from "@/components/ui/sonner";
-import NavContextProvider from "@/components/providers/NavContextProvider";
 import ButtonUp from "@/components/ButtonUp";
 
 const fontSans = FontSans({
@@ -59,12 +58,10 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<NavContextProvider>
-						<Header />
-						<ButtonUp />
-						{children}
-						<Toaster />
-					</NavContextProvider>
+					<Header />
+					<ButtonUp />
+					{children}
+					<Toaster />
 				</ThemeProvider>
 			</body>
 		</html>

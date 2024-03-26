@@ -95,6 +95,7 @@ const NavContextProvider = ({
 	children: React.ReactNode;
 }>) => {
 	const [nav, setNav] = useState<NavItem[]>(navigation);
+
 	const path = useUrlHash();
 	const [value, setValue] = useState("");
 	const router = useRouter();

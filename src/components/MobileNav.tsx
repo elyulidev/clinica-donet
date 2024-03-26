@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 import ModeToggle from "./ModeToggle";

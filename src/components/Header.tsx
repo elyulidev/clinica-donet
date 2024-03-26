@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import Logo from "../../public/logo/logo3.webp";
 import Nav from "./Nav";
 import Socials from "./Socials";
 import { IoLocationOutline, IoCallOutline } from "react-icons/io5";
+import { Suspense } from "react";
+import NavContextProvider from "./providers/NavContextProvider";
 
 const Header = () => {
 	return (
@@ -36,7 +39,11 @@ const Header = () => {
 				</div>
 			</section>
 			<section>
-				<Nav />
+				<Suspense>
+					<NavContextProvider>
+						<Nav />
+					</NavContextProvider>
+				</Suspense>
 			</section>
 		</header>
 	);
