@@ -26,7 +26,7 @@
 		--radius: 0.5rem;
 	}
 
-	.dark {
+	:root.dark {
 		--background: 20 14.3% 4.1%;
 		--foreground: 0 0% 95%;
 		--card: 24 9.8% 10%;
@@ -56,4 +56,12 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+.mask {
+	mask-image: linear-gradient(black 80%, transparent);
+}
+
+.bg-hero-team {
+	mask-image: linear-gradient(black 40%, transparent);
 }

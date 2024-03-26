@@ -15,6 +15,10 @@ const config = {
 			center: true,
 			padding: "2rem",
 			screens: {
+				sm: "640px",
+				md: "768px",
+				lg: "960px",
+				xl: "1200px",
 				"2xl": "1400px",
 			},
 		},
@@ -75,6 +79,13 @@ const config = {
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
+			},
+			backgroundImage: {
+				"hero-pattern": "url('/hero/hideout.svg')",
+				"hero-home":
+					"url('/donet/donet1-removebg-preview_upscayl_4x_realesrgan-x4plus.webp')",
+				"hero-team": "url('/donet/donet3-removebg.webp')",
+				"hero-customers": "url('/testimonials/hero-image-customers.webp')",
 			},
 		},
 	},
