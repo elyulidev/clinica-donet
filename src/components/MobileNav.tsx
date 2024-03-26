@@ -7,12 +7,12 @@ import { useContext } from "react";
 import { NavContext, NavItem } from "./providers/NavContextProvider";
 
 const MobileNav = () => {
-	const { nav, value } = useContext(NavContext);
+	const context = useContext(NavContext);
 	return (
 		<div className='lg:hidden fixed bottom-0 z-10 w-full'>
-			<Tabs defaultValue='home' value={value}>
+			<Tabs defaultValue='home' value={context?.value}>
 				<TabsList className='w-full rounded-tl-md rounded-tr-md rounded-bl-none rounded-br-none'>
-					{nav.map((item: NavItem) => (
+					{context?.nav.map((item: NavItem) => (
 						<Link href={item.href} key={item.id}>
 							<TabsTrigger value={item.value}>{item.icon}</TabsTrigger>
 						</Link>
