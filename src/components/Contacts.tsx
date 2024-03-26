@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Logo from "../../public/logo/logo3.webp";
 import { Separator } from "./ui/separator";
@@ -11,17 +12,36 @@ const Contacts = () => {
 	return (
 		<section id='contacts' className='w-full bg-secondary p-4'>
 			<div className='sm:max-w-[80%] min-h-screen flex flex-col justify-evenly items-center mx-auto'>
-				<div className=''>
+				<motion.div
+					initial={{ opacity: 0, translateY: 80 }}
+					whileInView={{ opacity: 1, translateY: 0 }}
+					transition={{ duration: 0.7 }}
+					viewport={{ once: true }}
+					className=''
+				>
 					<h2 className='text-3xl font-bold lg:text-5xl lg:mb-3'>
 						Contate-<span className='text-primary'>nos</span>
 					</h2>
-				</div>
+				</motion.div>
 				<div className='md:grid md:grid-cols-2 md:gap-4'>
-					<Card>
-						<ContactForm />
-					</Card>
+					<motion.div
+						initial={{ opacity: 0, translateX: 80 }}
+						whileInView={{ opacity: 1, translateX: 0 }}
+						transition={{ duration: 0.7 }}
+						viewport={{ once: true }}
+					>
+						<Card>
+							<ContactForm />
+						</Card>
+					</motion.div>
 
-					<article className='hidden md:block'>
+					<motion.article
+						initial={{ opacity: 0, translateX: -80 }}
+						whileInView={{ opacity: 1, translateX: 0 }}
+						transition={{ duration: 0.7 }}
+						viewport={{ once: true }}
+						className='hidden md:block'
+					>
 						<div className='flex justify-center items-center'>
 							<Image
 								src={Logo}
@@ -53,7 +73,7 @@ const Contacts = () => {
 							<div>Social:</div>
 							<Socials />
 						</div>
-					</article>
+					</motion.article>
 				</div>
 			</div>
 		</section>

@@ -18,7 +18,7 @@ const socials = [
 	{
 		id: 3,
 		name: "Twitter",
-		link: "https://twitter.com/",
+		link: "https://twitter.com",
 		icon: <FaXTwitter size={18} className='text-primary' />,
 	},
 ];
@@ -28,6 +28,7 @@ const Socials = () => {
 			<ul className='flex'>
 				{socials.map((item) => (
 					<li key={item.id} className={`text-foreground mr-2`}>
+						<a href={item.link} target='_blank' rel='noopener noreferrer'></a>
 						{item.icon}
 					</li>
 				))}

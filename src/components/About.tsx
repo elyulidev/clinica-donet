@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Logo from "../../public/logo/logo3.webp";
 import Dr1 from "../../public/about/manos-doctora-irreconocible-escribiendo-forma-escribiendo-teclado-portatil.webp";
@@ -5,6 +7,7 @@ import Dr2 from "../../public/about/medico-mujeres-hospital-estetoscopio.webp";
 import { GiSupersonicArrow } from "react-icons/gi";
 import { RiHandHeartLine } from "react-icons/ri";
 import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 
 export default function About() {
 	return (
@@ -12,7 +15,13 @@ export default function About() {
 			id='about'
 			className='w-full min-h-screen sm:max-w-[80%] mx-auto bg-background flex flex-col justify-evenly items-center  p-4'
 		>
-			<div className='flex justify-center items-center'>
+			<motion.div
+				initial={{ opacity: 0, translateY: -80 }}
+				whileInView={{ opacity: 1, translateY: 0 }}
+				transition={{ duration: 0.7 }}
+				viewport={{ once: true }}
+				className='flex justify-center items-center'
+			>
 				<Image
 					src={Logo}
 					alt=''
@@ -23,9 +32,15 @@ export default function About() {
 				<h2 className='text-3xl font-bold lg:text-4xl'>
 					donet<span className='text-primary'>Clínica</span>
 				</h2>
-			</div>
+			</motion.div>
 			<div className='lg:grid lg:grid-cols-2 lg:gap-4 '>
-				<article className='flex flex-col gap-1'>
+				<motion.article
+					initial={{ opacity: 0, translateX: -80 }}
+					whileInView={{ opacity: 1, translateX: 0 }}
+					transition={{ duration: 0.8 }}
+					viewport={{ once: true }}
+					className='flex flex-col gap-1'
+				>
 					<p className='text-pretty'>
 						Compartilhamos a visão integral da pessoa, promovendo a saúde com
 						ênfase na prevenção, no diagnóstico precoce e na qualidade de vida.
@@ -60,8 +75,14 @@ export default function About() {
 							</p>
 						</div>
 					</div>
-				</article>
-				<article className='hidden lg:flex lg:flex-col lg:justify-center lg:items-center lg:gap-4'>
+				</motion.article>
+				<motion.article
+					initial={{ opacity: 0, translateX: 80 }}
+					whileInView={{ opacity: 1, translateX: 0 }}
+					transition={{ duration: 0.8 }}
+					viewport={{ once: true }}
+					className='hidden lg:flex lg:flex-col lg:justify-center lg:items-center lg:gap-4'
+				>
 					<div className=''>
 						<Image
 							src={Dr1}
@@ -78,15 +99,19 @@ export default function About() {
 							style={{ aspectRatio: "500/347", maxWidth: "250px" }}
 						/>
 					</div>
-				</article>
+				</motion.article>
 			</div>
-			<a
+			<motion.a
 				href=''
 				download
 				className='flex justify-center items-center col-span-2 mt-1 lg:mt-6'
+				initial={{ opacity: 0, translateY: 80 }}
+				whileInView={{ opacity: 1, translateY: 0 }}
+				transition={{ duration: 0.7 }}
+				viewport={{ once: true }}
 			>
 				<Button>Saber mais</Button>
-			</a>
+			</motion.a>
 		</section>
 	);
 }

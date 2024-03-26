@@ -11,7 +11,7 @@ const ButtonUp = () => {
 		? "fixed bottom-12 right-3 z-50 transition-all ease-in-out duration-700 delay-300 opacity-100 animate-bounce"
 		: "hidden transition-all ease-in-out duration-700 delay-300 opacity-0";
 	return (
-		<Link href='#home'>
+		<Link href='#home' className='hidden lg:block'>
 			<Button className={styleBtn}>
 				<FaArrowUp />
 			</Button>
