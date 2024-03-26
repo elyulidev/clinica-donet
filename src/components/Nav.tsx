@@ -1,11 +1,18 @@
+"use client";
+
+import { Suspense } from "react";
 import PcNav from "./PcNav";
 import MobileNav from "./MobileNav";
 
 const Nav = () => {
 	return (
 		<nav>
-			<PcNav />
-			<MobileNav />
+			<Suspense>
+				<PcNav />
+			</Suspense>
+			<Suspense>
+				<MobileNav />
+			</Suspense>
 		</nav>
 	);
 };
