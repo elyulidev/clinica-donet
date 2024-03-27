@@ -7,7 +7,8 @@ export default function Services() {
 		<section id='services' className='w-full bg-secondary p-4'>
 			<div className='sm:max-w-[80%] min-h-screen  flex flex-col justify-evenly items-center mx-auto lg:grid lg:grid-cols-4 '>
 				<motion.div
-					initial={{ opacity: 0, translateX: -80 }}
+					initial={{ opacity: 0, translateX: -80, display: "none" }}
+					animate={{ display: "flex" }}
 					whileInView={{ opacity: 1, translateX: 0 }}
 					transition={{ duration: 1 }}
 					viewport={{ once: true }}
@@ -21,7 +22,8 @@ export default function Services() {
 					</p>
 				</motion.div>
 				<motion.div
-					initial={{ opacity: 0, translateX: 80 }}
+					initial={{ opacity: 0, translateX: 80, display: "none" }}
+					animate={{ display: "block" }}
 					whileInView={{ opacity: 1, translateX: 0 }}
 					transition={{ duration: 1 }}
 					viewport={{ once: true }}

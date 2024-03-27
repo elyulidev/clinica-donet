@@ -13,7 +13,8 @@ const Contacts = () => {
 		<section id='contacts' className='w-full bg-secondary p-4'>
 			<div className='sm:max-w-[80%] min-h-screen flex flex-col justify-evenly items-center mx-auto'>
 				<motion.div
-					initial={{ opacity: 0, translateY: 80 }}
+					initial={{ opacity: 0, translateY: 80, display: "none" }}
+					animate={{ display: "block" }}
 					whileInView={{ opacity: 1, translateY: 0 }}
 					transition={{ duration: 0.7 }}
 					viewport={{ once: true }}
@@ -25,7 +26,8 @@ const Contacts = () => {
 				</motion.div>
 				<div className='md:grid md:grid-cols-2 md:gap-4'>
 					<motion.div
-						initial={{ opacity: 0, translateX: 80 }}
+						initial={{ opacity: 0, translateX: 80, display: "none" }}
+						animate={{ display: "block" }}
 						whileInView={{ opacity: 1, translateX: 0 }}
 						transition={{ duration: 0.7 }}
 						viewport={{ once: true }}

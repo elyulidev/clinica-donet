@@ -11,14 +11,14 @@ export default function Team() {
 			id='team'
 			className='w-full relative min-h-screen bg-background flex justify-center items-center bg-hero-team bg-contain bg-no-repeat bg-center md:bg-none'
 		>
-			<motion.div className=''>
+			<div className=''>
 				<Image
 					src={Wave}
 					alt=''
 					priority={true}
 					className='absolute top-0 left-0 w-full overflow-hidden leading-[0px]'
 				/>
-			</motion.div>
+			</div>
 			<div className='max-w-[80%] mx-auto flex flex-col justify-center items-center md:grid md:grid-cols-4'>
 				<motion.div
 					initial={{ opacity: 0, translateX: 80 }}
@@ -37,7 +37,8 @@ export default function Team() {
 					/>
 				</motion.div>
 				<motion.div
-					initial={{ opacity: 0, translateX: -80 }}
+					initial={{ opacity: 0, translateX: -80, display: "none" }}
+					animate={{ display: "flex" }}
 					whileInView={{ opacity: 1, translateX: 0 }}
 					transition={{ duration: 0.7 }}
 					viewport={{ once: true }}

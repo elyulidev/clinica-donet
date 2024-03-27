@@ -16,7 +16,8 @@ export default function About() {
 			className='w-full min-h-screen sm:max-w-[80%] mx-auto bg-background flex flex-col justify-evenly items-center  p-4'
 		>
 			<motion.div
-				initial={{ opacity: 0, translateY: -80 }}
+				initial={{ opacity: 0, translateY: -80, display: "none" }}
+				animate={{ display: "block" }}
 				whileInView={{ opacity: 1, translateY: 0 }}
 				transition={{ duration: 0.7 }}
 				viewport={{ once: true }}
@@ -35,7 +36,8 @@ export default function About() {
 			</motion.div>
 			<div className='lg:grid lg:grid-cols-2 lg:gap-4 '>
 				<motion.article
-					initial={{ opacity: 0, translateX: -80 }}
+					initial={{ opacity: 0, translateX: -80, display: "none" }}
+					animate={{ display: "flex" }}
 					whileInView={{ opacity: 1, translateX: 0 }}
 					transition={{ duration: 0.8 }}
 					viewport={{ once: true }}
@@ -105,7 +107,8 @@ export default function About() {
 				href=''
 				download
 				className='flex justify-center items-center col-span-2 mt-1 lg:mt-6'
-				initial={{ opacity: 0, translateY: 80 }}
+				initial={{ opacity: 0, translateY: 80, display: "none" }}
+				animate={{ display: "flex" }}
 				whileInView={{ opacity: 1, translateY: 0 }}
 				transition={{ duration: 0.7 }}
 				viewport={{ once: true }}

@@ -21,6 +21,7 @@ const Footer = () => {
 				<div className='w-full'>
 					<h3 className='text-lg font-bold mb-2'>Contato</h3>
 					<p className='text-sm'>123 Calle Principal, Ciudad</p>
+
 					<p className='text-sm'>Tel: 123-456-7890</p>
 					<p className='text-sm'>Email: donetclinica@gmail.com</p>
 				</div>
@@ -92,6 +93,15 @@ const Footer = () => {
 							<FaXTwitter size={18} />
 						</a>
 					</div>
+					<p className='text-sm mt-4'>
+						<a
+							href='https://www.google.com/maps/dir/?api=1&destination=-34.603734,-58.377218&travelmode=driving&z=12&fov=90'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							Encontre-nos no Google Maps
+						</a>
+					</p>
 				</div>
 			</div>
 		</footer>

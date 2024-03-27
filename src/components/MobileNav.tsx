@@ -7,7 +7,7 @@ import { NavContext, NavItem } from "./providers/NavContextProvider";
 const MobileNav = () => {
 	const context = useContext(NavContext);
 	return (
-		<div className='lg:hidden fixed bottom-0 z-10 w-full'>
+		<div className='lg:hidden fixed bottom-0 left-0 right-0 z-[1000] h-10'>
 			<Tabs defaultValue='home' value={context?.value}>
 				<TabsList className='w-full rounded-tl-md rounded-tr-md rounded-bl-none rounded-br-none'>
 					{context?.nav.map((item: NavItem) => (

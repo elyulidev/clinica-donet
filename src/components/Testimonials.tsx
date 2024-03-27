@@ -4,10 +4,14 @@ import TestimonialSlides from "./TestimonialSlides";
 
 export default function Testimonials() {
 	return (
-		<section id='testimonials' className='w-full bg-background p-4'>
+		<section
+			id='testimonials'
+			className='w-full bg-background p-4 ' /* bg-hero-customers bg-cover bg-fixed  */
+		>
 			<div className='sm:max-w-[80%] min-h-screen  flex flex-col-reverse justify-evenly items-center mx-auto lg:grid lg:grid-cols-4 '>
 				<motion.div
-					initial={{ opacity: 0, translateX: -80 }}
+					initial={{ opacity: 0, translateX: -80, display: "none" }}
+					animate={{ display: "block" }}
 					whileInView={{ opacity: 1, translateX: 0, rotateX: 360 }}
 					transition={{ duration: 1.5 }}
 					viewport={{ once: true }}
@@ -16,7 +20,8 @@ export default function Testimonials() {
 					<TestimonialSlides />
 				</motion.div>
 				<motion.div
-					initial={{ opacity: 0, translateY: 80 }}
+					initial={{ opacity: 0, translateY: 80, display: "none" }}
+					animate={{ display: "flex" }}
 					whileInView={{ opacity: 1, translateY: 0 }}
 					transition={{ duration: 1 }}
 					viewport={{ once: true }}

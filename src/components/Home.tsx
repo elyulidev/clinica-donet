@@ -7,7 +7,8 @@ import { fadeIn } from "@/lib/variants";
 
 export default function Home() {
 	return (
-		<section className='w-full relative min-h-[calc(100vh-6.625em)] lg:min-h-[calc(100vh-6.251875em)] bg-background  flex justify-center items-center bg-hero-pattern bg-repeat'>
+		<section className='w-full relative min-h-[calc(100vh-9.125em)] lg:min-h-[calc(100vh-6.251875em)] bg-background  flex justify-center items-center bg-hero-pattern bg-repeat'>
+			{/* 6.625em */}
 			<div className='lg:max-w-[80%] mx-auto lg:grid lg:grid-cols-4'>
 				<motion.div
 					variants={fadeIn("up", 0.2)}

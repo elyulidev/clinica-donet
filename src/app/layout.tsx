@@ -48,7 +48,7 @@ export default function RootLayout({
 			<link rel='manifest' href='/favicon/site.webmanifest'></link>
 			<body
 				className={cn(
-					"min-h-screen bg-background font-sans antialiased",
+					"min-h-screen bg-background font-sans antialiased overflow-hidden relative",
 					fontSans.variable
 				)}
 			>
