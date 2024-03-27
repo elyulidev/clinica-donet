@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Header from "@/components/Header";
 import { Toaster } from "@/components/ui/sonner";
 import ButtonUp from "@/components/ButtonUp";
+import { Analytics } from "@vercel/analytics/react";
 
 const fontSans = FontSans({
 	subsets: ["latin"],
@@ -61,6 +62,7 @@ export default function RootLayout({
 					<Header />
 					<ButtonUp />
 					{children}
+					<Analytics />
 					<Toaster />
 				</ThemeProvider>
 			</body>
