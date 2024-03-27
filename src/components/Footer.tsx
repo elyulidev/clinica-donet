@@ -2,6 +2,7 @@ import Image from "next/image";
 import Logo from "../../public/logo/logo3.webp";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { IoLocationOutline } from "react-icons/io5";
 
 const Footer = () => {
 	return (
@@ -98,7 +99,9 @@ const Footer = () => {
 							href='https://www.google.com/maps/dir/?api=1&destination=-34.603734,-58.377218&travelmode=driving&z=12&fov=90'
 							target='_blank'
 							rel='noopener noreferrer'
+							className='flex hover:underline'
 						>
+							<IoLocationOutline size={18} />
 							Encontre-nos no Google Maps
 						</a>
 					</p>
