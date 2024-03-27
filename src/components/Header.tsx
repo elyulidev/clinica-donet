@@ -25,8 +25,13 @@ const Header = () => {
 						<div className='lg:w-[50%] lg:flex lg:flex-row lg:justify-between'>
 							<div className='flex justify-left items-center text-primary'>
 								<IoCallOutline size={18} className='mr-2 ' />
-								{/* <a href='tel:+595972880883'>+595 972 880883</a> */}
-								<a href='whatsapp://send?text= Hola'>+595 972 880883</a>
+								<a
+									href='https://api.whatsapp.com/send?phone=595972880883&text=Hola'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									+595 972 880883
+								</a>
 							</div>
 							<div className='flex justify-left items-center text-primary'>
 								<IoLocationOutline size={18} className='mr-2' />
