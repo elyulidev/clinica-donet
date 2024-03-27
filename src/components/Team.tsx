@@ -54,7 +54,7 @@ export default function Team() {
 						mundo no atendimento ao paciente.
 					</p>
 					<a
-						href=''
+						href='/cv/Curriculum_Dr_Juan_Lazaro_Donet_Montero.docx'
 						download
 						className='flex justify-center items-center col-span-2 mt-1 lg:mt-6'
 					>
