@@ -17,7 +17,7 @@ export default function About() {
 		>
 			<motion.div
 				initial={{ opacity: 0, translateY: -80, display: "none" }}
-				animate={{ display: "block" }}
+				animate={{ display: "flex" }}
 				whileInView={{ opacity: 1, translateY: 0 }}
 				transition={{ duration: 0.7 }}
 				viewport={{ once: true }}
@@ -54,7 +54,7 @@ export default function About() {
 						<div className='flex flex-col gap-1'>
 							<h3 className='text-xl font-bold'>Nossa Missão</h3>
 							<p className='text-pretty'>
-								<span className='font-bold text-primary'>donetClinic </span>
+								<span className='font-bold text-primary'>donetClinica </span>
 								tem como missão ser um centro de referência em serviços de saúde
 								acessíveis e compassivos para melhorar a qualidade de vida
 								daqueles que confiam em nós.
@@ -69,7 +69,7 @@ export default function About() {
 						<div className='flex flex-col gap-1'>
 							<h3 className='text-xl font-bold'>Nossa Visão</h3>
 							<p className='text-pretty'>
-								Na <span className='font-bold text-primary'>donetClinic</span>{" "}
+								Na <span className='font-bold text-primary'>donetClinica</span>{" "}
 								nossa visão é sermos líderes em inovação médica e reconhecidos
 								como um modelo de excelência em cuidados de saúde, inspirando
 								outras clínicas a seguir os nossos padrões de qualidade e
