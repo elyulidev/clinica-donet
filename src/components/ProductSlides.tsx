@@ -51,6 +51,7 @@ const naturalProducts = [
 		path: "/products/creme-aloe-vera.webp",
 	},
 ];
+
 const ProductSlides = () => {
 	return (
 		<Carousel className='w-full max-w-[250px] md:max-w-md lg:max-w-xl lg:ml-6'>
@@ -80,8 +81,8 @@ const ProductSlides = () => {
 								</CardContent>
 								<CardFooter>
 									<div className='w-full flex justify-end'>
-										<span className='text-primary font-bold'>price: </span>{" "}
-										{prod.price}
+										<span className='text-primary font-bold mr-1'>Preço: </span>{" "}
+										<span>{prod.price}</span>
 									</div>
 								</CardFooter>
 							</Card>

@@ -82,8 +82,8 @@ const ServiceSlides = () => {
 								</CardContent>
 								<CardFooter>
 									<div className='w-full flex justify-end'>
-										<span className='text-primary font-bold'>price: </span>{" "}
-										{serv.price}
+										<span className='text-primary font-bold mr-1'>Preço: </span>{" "}
+										<span>{serv.price}</span>
 									</div>
 								</CardFooter>
 							</Card>
