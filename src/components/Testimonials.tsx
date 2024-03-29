@@ -6,7 +6,7 @@ export default function Testimonials() {
 	return (
 		<section
 			id='testimonials'
-			className='w-full bg-background p-4 ' /* bg-hero-customers bg-cover bg-fixed  */
+			className='w-full bg-background p-4 bg-hero-customers bg-cover bg-fixed bg-center'
 		>
 			<div className='sm:max-w-[80%] min-h-screen  flex flex-col-reverse justify-evenly items-center mx-auto lg:grid lg:grid-cols-4 '>
 				<motion.div
